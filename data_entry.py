@@ -10,7 +10,7 @@ class CSV:
 		self.csvFileName = fileName
 		
 
-	def initializeCsv(self, list: list[str]):
+	def initialize_csv(self, list: list[str]):
 		self.columns = list
 
 		try:
@@ -19,7 +19,7 @@ class CSV:
 			dataFrame = pd.DataFrame(columns=list)
 			dataFrame.to_csv(self.csvFileName, index=False)
 
-	def addEntry(self, *args):
+	def add_entry(self, *args):
 		print(args)
 		columnCount = len(args)
 		print(columnCount)

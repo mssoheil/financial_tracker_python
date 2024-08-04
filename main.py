@@ -1,12 +1,16 @@
 from data_entry import CSV
-from get_data import getDate
+from get_data import get_date, get_amount, get_category, get_description
 
 
 def add():
     csv = CSV("expense.csv")
-    csv.initializeCsv(["date", "amount", "category", "description"])
-    date = getDate(allowDefault=True)
-    print(date)    
+    csv.initialize_csv(["date", "amount", "category", "description"])
+
+    date = get_date(allowDefault=True)
+    amount = get_amount()
+    category = get_category()
+    description = get_description()
+    print(date, amount, category, description)    
 
 
 def main():
