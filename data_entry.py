@@ -40,3 +40,10 @@ class CSV:
 			writer.writerow(newEntry)
 
 		print("Entered record added successfully")
+
+	
+	def read_data_frame(self):
+		data_frame = pd.read_csv(self.csvFileName)
+		return data_frame
+	
+	

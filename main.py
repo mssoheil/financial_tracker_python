@@ -12,7 +12,12 @@ def add():
     description = get_description()
 
     csv.add_entry(date, amount, category, description)
-    print(date, amount, category, description)    
+    print(date, amount, category, description)   
+
+def get_transaction():
+    csv = CSV("expense.csv")
+    csv.initialize_csv(["date", "amount", "category", "description"])
+    data_frame = csv.read_data_frame()
 
 
 def main():
