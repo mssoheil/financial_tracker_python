@@ -10,6 +10,8 @@ def add():
     amount = get_amount()
     category = get_category()
     description = get_description()
+
+    csv.add_entry(date, amount, category, description)
     print(date, amount, category, description)    
 
 
