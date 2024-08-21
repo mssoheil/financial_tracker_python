@@ -1,17 +1,17 @@
 
 from datetime import datetime
 
-defaultFormat = "%d-%m-%Y"
+DEFAULT_FORMAT = "%d-%m-%Y"
 CATEGORIES = {"I": "Income", "E": "Expense"}
 
 def get_date(allowDefault = False):
-    date = input("Enter transaction date in yyyy-mm-dd format or Enter for today date: ")
+    date = input("Enter transaction date in dd-mm-yyyy format or Enter for today date: ")
     if allowDefault and not date:
-        return datetime.today().strftime(defaultFormat)
+        return datetime.today().strftime(DEFAULT_FORMAT)
     
     try:
-        validDate = datetime.strptime(date, defaultFormat)
-        return validDate.strftime(defaultFormat)
+        validDate = datetime.strptime(date, DEFAULT_FORMAT)
+        return validDate.strftime(DEFAULT_FORMAT)
     
     except ValueError:
         print("Invalid date format, the date format should be in dd-mm-yyyy")

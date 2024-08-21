@@ -46,4 +46,7 @@ class CSV:
 		data_frame = pd.read_csv(self.csvFileName)
 		return data_frame
 	
+	def convert_to_datetime(_, column_value: pd.Series, format: str):
+		return pd.to_datetime(column_value, format=format)
+	
 	
