@@ -1,1 +1,1 @@
-# financial_tracker_python
+# financial tracker written in python
